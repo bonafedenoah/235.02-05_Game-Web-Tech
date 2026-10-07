@@ -1,0 +1,58 @@
+/* Do everything in this file */
+
+header, 
+main, 
+footer {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure img {
+  width: 100%;
+}
+
+#tetlist {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tet {
+  flex: 1 0 220px;
+  border: 1px solid black;
+  text-align: center; /* Center all contents inside tetromino divs */
+  box-sizing: border-box;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.tet img {
+  width: 60%;
+}
+
+.tet span {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.tet .aliases {
+  text-align: left;
+  margin: 1em;
+}
+
+.tet.long img {
+  width: 80%;
+}
+
+.tet.square img {
+  width: 40%;
+}
