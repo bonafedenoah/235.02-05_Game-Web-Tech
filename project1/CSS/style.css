@@ -1,0 +1,316 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Garamond, "Times New Roman", Georgia, serif;
+    color: #222222;
+    background-color: #dcdcdc;
+    line-height: 1.35;
+    padding: 20px;
+}
+
+/* Magazine Spread Container */
+.magazine-spread {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+}
+
+/* Header Area */
+.spread-header {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 30px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.header-left-img img {
+    width: 100%;
+    border: 1px solid #aaa;
+    display: block;
+}
+
+.script-title {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", Arial, sans-serif;
+    font-size: 3.5rem;
+    color: #1f0eb7;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.kicker-banner {
+    background-color: #484c7f;
+    color: #ffffff;
+    padding: 6px 15px;
+    display: inline-block;
+}
+
+.kicker-banner span {
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+/* Spread Body (2 Columns) */
+.spread-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Column Common */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Article Typography (Sans-Serif Navy Headers & Serif Body) */
+h2 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.45rem;
+    font-weight: bold;
+    color: #1a2b4c;
+    margin-bottom: 8px;
+    letter-spacing: -0.2px;
+}
+
+p {
+    font-family: Garamond, "Times New Roman", Georgia, serif;
+    font-size: 0.9rem;
+    line-height: 1.32;
+    margin-bottom: 10px;
+}
+
+.lead {
+    font-family: Garamond, Georgia, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+}
+
+.author {
+    font-family: Garamond, Georgia, serif;
+    font-size: 0.85rem;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.location {
+    font-family: Garamond, Georgia, serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.callout-text {
+    font-family: Garamond, Georgia, serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    line-height: 1.3;
+    margin-top: 10px;
+}
+
+/* Text-wrap for Outback */
+.outback-content-wrapper {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.outback-img {
+    float: right;
+    width: 200px;
+    height: auto;
+    margin: 0 0 10px 15px;
+    display: block;
+}
+
+/* Text-wrap for First Love (Subaru 360) */
+.first-love-content {
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.subaru360-img {
+    float: right;
+    width: 170px;
+    height: auto;
+    margin: 0 0 10px 12px;
+    display: block;
+}
+
+/* Full-width rainbow image neatly contained inside the right column */
+.rainbow-flush-container {
+    margin-top: 15px;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.rainbow-flush-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Layering Container */
+.image-layer-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.image-layer-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* The Foreground Layered Badge */
+.gameplay-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(26, 43, 76, 0.85); /* Navy background with transparency */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 6px 12px;
+    z-index: 10;
+    border-bottom: 2px solid #b39b6e;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+/* Brown Contact Box (All Sans-Serif) */
+.brown-contact-box {
+    background-color: #a39673;
+    color: #1a1a1a;
+    padding: 22px;
+    margin-top: 25px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.feedback-kicker {
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.feedback-subhead {
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 1.85rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: none;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.contact-text p {
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.fine-print {
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 0.65rem;
+    line-height: 1.3;
+    color: #222222;
+}
+
+/* Footer & Links */
+a {
+    color: #1a45b8;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+}
+
+a:link {
+    color: #1a45b8;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4a237a;
+}
+
+a:focus {
+    outline: 2px solid #b39b6e;
+    outline-offset: 2px;
+}
+
+a:hover {
+    color: #0d225c;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #b81a1a;
+}
+
+/* Responsive Layout: Mobile*/
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .magazine-spread {
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    /* Collapse Header */
+    .spread-header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .script-title {
+        font-size: 3rem;
+    }
+
+    /* Collapse the Two-Column Spread into a Single Column */
+    .spread-body {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* Adjust floats on mobile so text flows naturally under images */
+    .outback-img, .subaru360-img {
+        float: none;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto 15px auto;
+        display: block;
+    }
+}
