@@ -64,17 +64,26 @@ body {
 }
 
 /* Spread Body (2 Columns) */
-.spread-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1rem;
 }
 
 /* Column Common */
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.col1-top {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.col1-bottom {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.col2 {
+  grid-column: 2;
+  grid-row: 1 / span 2; /* Spans both rows */
 }
 
 /* Article Typography (Sans-Serif Navy Headers & Serif Body) */
@@ -279,9 +288,10 @@ a:active {
 
 /* Responsive Layout: Mobile*/
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Collapse to 1 column */
+  }
 
     .magazine-spread {
         padding: 20px;
@@ -299,11 +309,17 @@ a:active {
         font-size: 3rem;
     }
 
-    /* Collapse the Two-Column Spread into a Single Column */
-    .spread-body {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
+    .col1-top {
+    order: 1; /* Top half of Column 1 goes first */
+  }
+
+  .col2 {
+    order: 2; /* Column 2 goes in the middle */
+  }
+
+  .col1-bottom {
+    order: 3; /* Bottom half of Column 1 goes last */
+  }
 
     /* Adjust floats on mobile so text flows naturally under images */
     .outback-img, .subaru360-img {
