@@ -288,10 +288,9 @@ a:active {
 
 /* Responsive Layout: Mobile*/
 @media (max-width: 768px) {
-    .grid-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Collapse to 1 column */
-  }
+    body {
+        padding: 10px;
+    }
 
     .magazine-spread {
         padding: 20px;
@@ -309,19 +308,20 @@ a:active {
         font-size: 3rem;
     }
 
-    .col1-top {
-    order: 1; /* Top half of Column 1 goes first */
-  }
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .col2 {
-    order: 2; /* Column 2 goes in the middle */
-  }
+    .col1-top, .col2 {
+        order: 1;
+    }
 
-  .col1-bottom {
-    order: 3; /* Bottom half of Column 1 goes last */
-  }
+    .col1-bottom {
+        order: 2;
+        margin-top: 25px;
+    }
 
-    /* Adjust floats on mobile so text flows naturally under images */
     .outback-img, .subaru360-img {
         float: none;
         width: 100%;

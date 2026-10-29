@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Documentation - Subaru Magazine Spread</title>
+    <title>Project Documentation - Graveyard Keeper 2 Review</title>
     <style>
         * {
             box-sizing: border-box;
@@ -109,16 +109,24 @@
         
         <header>
             <h1>Project Documentation</h1>
-            <p class="subtitle">Subaru Magazine Spread — Phase 1: Build to Spec</p>
+            <p class="subtitle">Graveyard Keeper 2 Review & Gameplay — Phase 2: Adapt to Content</p>
         </header>
 
         <!-- Quick Links -->
         <section>
-            <h2>1. Quick Navigation & Design Source</h2>
+            <h2>Quick Navigation & Design Source</h2>
             <ul>
-                <li><strong>Best Recreations:</strong> <a href="spec.html">View spec.html Page</a></li>
-                <li><strong>Original Design:</strong> <a href="src/subaru.pdf" target="_blank">View Subaru Reference PDF</a></li>
+                <li><strong>Finished Review Page:</strong> <a href="index.html">View index.html Page</a></li>
+                <li><strong>Phase 1 Spec Page:</strong> <a href="spec.html">View spec.html Page</a></li>
+                <li><strong>Original Design Source:</strong> <a href="src/subaru.pdf" target="_blank">View Subaru Reference PDF</a></li>
             </ul>
+        </section>
+
+        <!-- Project Overview & Goals -->
+        <section>
+            <h2>1. Project Overview & Audience</h2>
+            <p><strong>Goal:</strong> To adapt the structured print magazine layout from Phase 1 into a fully responsive, custom-themed web review and gameplay breakdown for <em>Graveyard Keeper 2</em> using semantic HTML5, CSS Grid, Flexbox, and media queries.</p>
+            <p><strong>Target Audience:</strong> Simulation and indie gaming enthusiasts, fans of dark comedy management RPGs, and readers seeking detailed gameplay mechanics and reviews.</p>
         </section>
 
         <!-- External Resources -->
@@ -127,21 +135,19 @@
             <ul>
                 <li><strong>Images Used:</strong>
                     <ul>
-                        <li><code>media/hand.jpg</code> — Reader letters graphic</li>
-                        <li><code>media/outback.png</code> — 2002-2005 Subaru Outback image</li>
-                        <li><code>media/subaru360.png</code> — Classic Subaru 360 vintage car image</li>
-                        <li><code>media/rainbow.png</code> — Subaru WRX rainbow article photograph</li>
+                        <li><code>media/TitleScreen.png</code> — Header title graphic / game logo</li>
+                        <li><code>media/Graveyard.png</code> — Graveyard mechanics screenshot</li>
+                        <li><code>media/MapImages.png</code> — World map and story preview image</li>
+                        <li><code>media/Zombie.png</code> — Zombie workforce / gameplay feature screenshot</li>
                     </ul>
                 </li>
-                <li><strong>Written Content:</strong> The same text from the original pdf</li>
-                <li><strong>Typography / Fonts:</strong> The same fonts or as close as I could get to the orginal pdf</li>
+                <li><strong>Written Content:</strong> Original game review text, expert review extracts from Thumb Culture, The Outerhaven, Metro.co.uk, and Cinelinx (via MobyGames).</li>
+                <li><strong>Typography / Fonts:</strong> Garamond, Georgia, and Arial (system fallback stacks).</li>
                 <li><strong>Tutorials & Technical Documentation:</strong>
                     <ul>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">MDN Web Docs: CSS Grid Layout</a></li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float" target="_blank">MDN Web Docs: CSS float & Block Formatting Contexts</a></li>
-                        <li><a href="http://www.youtube.com/watch?v=1YNsYzegaZo" target="_blank">Responsive CSS grid - Flexbox using HTML & CSS</a></li>
-                        <li><a href="http://www.youtube.com/watch?v=xIJvkm-CgFQ" target="_blank">Learn CSS float in 3 minutes</a></li>
-                        <li><a href="http://www.youtube.com/watch?v=-A_HESNP1T8" target="_blank">Responsive Image With Text Section Design Using CSS Grid</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">MDN Web Docs: CSS Positioning (Relative/Absolute Layering)</a></li>
                     </ul>
                 </li>
             </ul>
@@ -152,29 +158,29 @@
             <h2>3. Implementation Notes & Challenges</h2>
             <p><strong>Challenging Parts:</strong></p>
             <ul>
-                <li><strong>Text-Wrapping around Transparent PNGs:</strong> Configuring precise text wraps around the Outback and Subaru 360 images required balancing float properties and margins so the body text wrapped tightly without overlapping text containers.</li>
-                <li><strong>Brown Sidebar Typography:</strong> Fine-tuning contrast, sans-serif font weights, and internal padding within the brown contact box to match print contrast standards while preserving proper HTML block alignment. Still is not correct but I tried.</li>
+                <li><strong>Responsive Ordering:</strong> Reconfiguring the layout flow for narrow mobile screens so that the main two-column content stacks cleanly and the review summary box (`.brown-contact-box`) drops to the absolute bottom using Flexbox `order` properties.</li>
+                <li><strong>Visual Layering Effect:</strong> Implementing a true foreground overlay badge (`.gameplay-badge`) positioned over the zombie gameplay image using `position: absolute` within a `position: relative` wrapper.</li>
             </ul>
             <p><strong>Ways Went 'Above and Beyond':</strong></p>
             <ul>
-                <li>Converted and optimized all image assets to PNGs to support clean alpha transparency for floating article images.</li>
+                <li>Integrated full 5-state custom link styling (`:link`, `:visited`, `:focus`, `:hover`, `:active`) and optimized screenshot assets for rapid screen rendering.</li>
             </ul>
         </section>
 
         <!-- Responsive Sketch Section -->
         <section>
-            <h2>4. Responsive Mobile Plan & Sketch</h2>
-                 <p>
-                    This is my planned mobile version for my website. It was made with canva so it shows a detailed version of how the cite will collaptes into a single colloum format.
-                </p>
-                <div style="text-align: center; margin: 20px 0;">
-                    <img src="media/mobile-sketch-1.png" alt="Mobile Responsive Plan Mockup" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                    <img src="media/mobile-sketch-2.png" alt="Mobile Responsive Plan Mockup" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                </div>
+            <h2>4. Responsive Mobile Plan & Sketches</h2>
+            <p>
+                The mobile layout was planned out using Canva mockups to demonstrate how the multi-column desktop design adapts and collapses into a single-column flow on narrow screens.
+            </p>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="media/mobile-sketch-1.png" alt="Mobile Responsive Plan Mockup Part 1" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 15px;">
+                <img src="media/mobile-sketch-2.png" alt="Mobile Responsive Plan Mockup Part 2" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            </div>
         </section>
 
         <footer class="nav-links">
-            <p><a href="spec.html">&larr; Return to Magazine Spread (spec.html)</a></p>
+            <p><a href="index.html">&larr; Return to Graveyard Keeper 2 Review (index.html)</a> | <a href="spec.html">View Phase 1 Spec (spec.html)</a></p>
         </footer>
 
     </div>
