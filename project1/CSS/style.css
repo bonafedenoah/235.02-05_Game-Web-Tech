@@ -83,7 +83,7 @@ body {
 
 .col2 {
   grid-column: 2;
-  grid-row: 1 / span 2; /* Spans both rows */
+  grid-row: 1 / span 2;
 }
 
 /* Article Typography (Sans-Serif Navy Headers & Serif Body) */
